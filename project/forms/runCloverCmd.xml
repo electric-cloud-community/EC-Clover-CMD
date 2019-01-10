@@ -1,0 +1,137 @@
+<editor>
+    <help>/commander/pages/@PLUGIN_NAME@/@PLUGIN_KEY@_help?s=Administration&amp;ss=Plugins#runCloverCmd</help>
+    <formElement>
+        <label>Working Directory</label>
+        <property>workingdirectory</property>
+        <value></value>
+        <documentation>The directory on which the command will be executed.</documentation>
+        <required>0</required>
+        <type>entry</type>
+    </formElement>
+    <formElement>
+        <label>Path to java</label>
+        <property>javapath</property>
+        <value>java</value>
+        <documentation>Path to java.</documentation>
+        <required>1</required>
+        <type>entry</type>
+    </formElement>
+    <formElement>
+        <label>Path to clover</label>
+        <property>clovercmddir</property>
+        <value></value>
+        <documentation>Absolute path to Clover.jar. Default value assumes Clover Command Line Tools are loaded in the system path.</documentation>
+        <required>0</required>
+        <type>entry</type>
+    </formElement>
+    <formElement>
+        <label>Source Directory</label>
+        <property>sourcefilepath</property>
+        <documentation>Path of the directory where the source files to be instrumented are located.</documentation>
+        <required>1</required>
+        <type>entry</type>
+    </formElement>
+    <formElement>
+        <label>Destination Folder</label>
+        <property>sourcefiledest</property>
+        <documentation>Directory where Clover should place the instrumented sources. Note that files will be overwritten in the destination directory.</documentation>
+        <required>1</required>
+        <type>entry</type>
+    </formElement>
+    <formElement>
+        <label>Instrumenting db file</label>
+        <property>initstring</property>
+        <documentation>Clover initstring. This is the full path to the dbfile that will be used to construct/update to store coverage data.</documentation>
+        <required>0</required>
+        <type>entry</type>
+    </formElement>
+    <formElement>
+        <label>Verbose Mode</label>
+        <property>verbose</property>
+        <documentation>Enables extra verbosity</documentation>
+        <required>0</required>
+        <type>checkbox</type>
+        <checkedValue>1</checkedValue>
+        <uncheckedValue>0</uncheckedValue>
+    </formElement>
+    <formElement>
+        <label>Always Report</label>
+        <property>alwaysreport</property>
+        <documentation>Generates report even if it is no coverage info.</documentation>
+        <required>0</required>
+        <type>checkbox</type>
+        <checkedValue>1</checkedValue>
+        <uncheckedValue>0</uncheckedValue>
+    </formElement>
+    <formElement>
+        <label>Compile command</label>
+        <property>compileexec</property>
+        <value></value>
+        <documentation>Compile command-line used for compilation of instrumented source files.
+        Ant or javac is recommended.</documentation>
+        <required>0</required>
+        <type>textarea</type>
+    </formElement>
+    <formElement>
+        <label>Additional commands for CloverInstr</label>
+        <property>additionalinstrcommands</property>
+        <value></value>
+        <documentation>Additional commands to be entered for CloverInstr</documentation>
+        <required>0</required>
+        <type>textarea</type>
+    </formElement>
+    <formElement>
+        <label>Test Command line</label>
+        <property>testcaseexec</property>
+        <value></value>
+        <documentation>String containing the command-line for invoking the tests.</documentation>
+        <required>1</required>
+        <type>textarea</type>
+    </formElement>
+    <formElement>
+        <label>Merge</label>
+        <property>merge</property>
+        <documentation>Enables the merging of existing Clover databases to allow combined reports to be generated.</documentation>
+        <required>0</required>
+        <type>checkbox</type>
+        <checkedValue>1</checkedValue>
+        <uncheckedValue>0</uncheckedValue>
+    </formElement>
+    <formElement>
+        <label>Update</label>
+        <property>update</property>
+        <documentation>If checked, any existing database specified by -i will be included in the merge. If interval is specified, it is used as the span when reading the existing database.</documentation>
+        <required>0</required>
+        <type>checkbox</type>
+        <checkedValue>1</checkedValue>
+        <uncheckedValue>0</uncheckedValue>
+    </formElement>
+    <formElement>
+        <label>Additional commands for CloverMerge</label>
+        <property>additionalmergecommands</property>
+        <value></value>
+        <documentation>Additional commands to be entered for CloverMerge</documentation>
+        <required>0</required>
+        <type>textarea</type>
+    </formElement>
+    <formElement>
+        <label>Report format</label>
+        <property>reporttype</property>
+        <value></value>
+        <documentation>Type of Report to Generate</documentation>
+        <required>1</required>
+        <type>select</type>
+        <option><name>Console</name><value>console</value></option>
+        <option><name>HTML</name><value>html</value></option>
+        <option><name>XML</name><value>xml</value></option>
+        <option><name>PDF</name><value>pdf</value></option>
+    </formElement>
+    <formElement>
+        <label>Report name</label>
+        <property>outputfile</property>
+        <value></value>
+        <documentation>Filename of the output report</documentation>
+        <required>0</required>
+        <type>entry</type>
+    </formElement>
+</editor>

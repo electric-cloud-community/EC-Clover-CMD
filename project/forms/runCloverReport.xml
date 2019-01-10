@@ -1,0 +1,85 @@
+<editor>
+    <help>/commander/pages/@PLUGIN_NAME@/@PLUGIN_KEY@_help?s=Administration&amp;ss=Plugins#runCloverReport</help>
+    <formElement>
+        <label>Working Directory</label>
+        <property>workingdirectory</property>
+        <value></value>
+        <documentation>The directory on which the command will be executed.</documentation>
+        <required>0</required>
+        <type>entry</type>
+    </formElement>
+    <formElement>
+        <label>Path to java</label>
+        <property>javapath</property>
+        <documentation>Absolute path to java</documentation>
+        <required>0</required>
+        <type>entry</type>
+    </formElement>
+    <formElement>
+        <label>ClassPath</label>
+        <property>classpath</property>
+        <documentation>Classpath to be entered.</documentation>
+        <required>0</required>
+        <type>entry</type>
+    </formElement>
+    <formElement>
+        <label>Instrumenting db file</label>
+        <property>initstring</property>
+        <documentation>Clover initstring. This is the full path to the dbfile that will be used to construct/update to store coverage data.</documentation>
+        <required>1</required>
+        <type>entry</type>
+    </formElement>
+    <formElement>
+        <label>Source Directory</label>
+        <property>sourcefilepath</property>
+        <documentation>Path of the directory where the source files to be instrumented are located.</documentation>
+        <required>1</required>
+        <type>entry</type>
+    </formElement>
+    <formElement>
+        <label>Verbose Mode</label>
+        <property>verbose</property>
+        <documentation>Enables extra verbosity</documentation>
+        <required>0</required>
+        <type>checkbox</type>
+        <checkedValue>1</checkedValue>
+        <uncheckedValue>0</uncheckedValue>
+    </formElement>
+    <formElement>
+        <label>Always Report</label>
+        <property>alwaysreport</property>
+        <documentation>Generates report even if it is no coverage info.</documentation>
+        <required>0</required>
+        <type>checkbox</type>
+        <checkedValue>1</checkedValue>
+        <uncheckedValue>0</uncheckedValue>
+    </formElement>
+    <formElement>
+        <label>Additional commands for CloverReport</label>
+        <property>additionalreportcommands</property>
+        <value></value>
+        <documentation>Additional commands to be entered for CloverReport</documentation>
+        <required>0</required>
+        <type>textarea</type>
+    </formElement>
+    <formElement>
+        <label>Report Type</label>
+        <property>reporttype</property>
+        <value></value>
+        <documentation>Type of Report to Generate</documentation>
+        <required>1</required>
+        <type>select</type>
+        <option><name>Console</name><value>console</value></option>
+        <option><name>HTML</name><value>html</value></option>
+        <option><name>XML</name><value>xml</value></option>
+        <option><name>PDF</name><value>pdf</value></option>
+    </formElement>
+    <formElement>
+        <label>Report name</label>
+        <property>outputfile</property>
+        <value></value>
+        <documentation>Filename of the output report.</documentation>
+        <required>0</required>
+        <type>entry</type>
+    </formElement>
+</editor>

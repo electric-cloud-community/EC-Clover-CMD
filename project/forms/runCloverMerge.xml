@@ -1,0 +1,73 @@
+<editor>
+    <help>/commander/pages/@PLUGIN_NAME@/@PLUGIN_KEY@_help?s=Administration&amp;ss=Plugins#runCloverMerge</help>
+    <formElement>
+        <label>Working Directory</label>
+        <property>workingdirectory</property>
+        <value></value>
+        <documentation>The directory on which the command will be executed.</documentation>
+        <required>0</required>
+        <type>entry</type>
+    </formElement>
+    <formElement>
+        <label>Path to Java</label>
+        <property>javapath</property>
+        <documentation>Absolute path to java.</documentation>
+        <required>0</required>
+        <type>entry</type>
+    </formElement>
+    <formElement>
+        <label>ClassPath</label>
+        <property>classpath</property>
+        <documentation>Classpath to be entered.</documentation>
+        <required>0</required>
+        <type>entry</type>
+    </formElement>
+    <formElement>
+        <label>Clover Merge's Main Class</label>
+        <property>mergemainclass</property>
+        <documentation>Clover Merge's Main Class</documentation>
+        <required>1</required>
+        <value>com.cenqua.clover.CloverMerge</value>
+        <type>entry</type>
+    </formElement>
+    <formElement>
+        <label>Merged DB file destination</label>
+        <property>initstring</property>
+        <documentation>Clover initstring. This is the path where the new merged database will be written.</documentation>
+        <required>1</required>
+        <type>entry</type>
+    </formElement>
+    <formElement>
+        <label>Verbose Mode</label>
+        <property>verbose</property>
+        <documentation>Enables extra verbosity</documentation>
+        <required>0</required>
+        <type>checkbox</type>
+        <checkedValue>1</checkedValue>
+        <uncheckedValue>0</uncheckedValue>
+    </formElement>
+    <formElement>
+        <label>Update</label>
+        <property>update</property>
+        <documentation>If specified, any existing database specified by -i will be included in the merge. If interval is specified, it is used as the span when reading the existing database.</documentation>
+        <required>0</required>
+        <type>checkbox</type>
+        <checkedValue>1</checkedValue>
+        <uncheckedValue>0</uncheckedValue>
+    </formElement>
+    <formElement>
+        <label>Additional commands for CloverMerge</label>
+        <property>additionalmergecommands</property>
+        <value></value>
+        <documentation>Additional commands to be entered for CloverMerge</documentation>
+        <required>0</required>
+        <type>textarea</type>
+    </formElement>
+    <formElement>
+        <label>Database files to merge</label>
+        <property>dbfilestomerge</property>
+        <documentation>Database files to merge.</documentation>
+        <required>1</required>
+        <type>textarea</type>
+    </formElement>
+</editor>

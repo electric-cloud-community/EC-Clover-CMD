@@ -1,0 +1,71 @@
+<editor>
+    <help>/commander/pages/@PLUGIN_NAME@/@PLUGIN_KEY@_help?s=Administration&amp;ss=Plugins#runCloverInstr</help>
+    <formElement>
+        <label>Working Directory</label>
+        <property>workingdirectory</property>
+        <value></value>
+        <documentation>The directory on which the command will be executed.</documentation>
+        <required>0</required>
+        <type>entry</type>
+    </formElement>
+    <formElement>
+        <label>Path to java</label>
+        <property>javapath</property>
+        <documentation>Absolute path to java.</documentation>
+        <required>0</required>
+        <type>entry</type>
+    </formElement>
+    <formElement>
+        <label>ClassPath</label>
+        <property>classpath</property>
+        <documentation>Classpath to be entered.</documentation>
+        <required>0</required>
+        <type>entry</type>
+    </formElement>
+    <formElement>
+        <label>Clover Instr's Main Class</label>
+        <property>instrmainclass</property>
+        <documentation>Clover Instr's Main Class</documentation>
+        <value>com.cenqua.clover.CloverInstr</value>
+        <required>1</required>
+        <type>entry</type>
+    </formElement>
+    <formElement>
+        <label>Instrumenting db file</label>
+        <property>initstring</property>
+        <documentation>Clover initstring. This is the full path to the dbfile that will be used to construct/update to store coverage data.</documentation>
+        <required>1</required>
+        <type>entry</type>
+    </formElement>
+    <formElement>
+        <label>Source Directory</label>
+        <property>sourcefilepath</property>
+        <documentation>Path of the directory where the source files to be instrumented are located.</documentation>
+        <required>1</required>
+        <type>entry</type>
+    </formElement>
+    <formElement>
+        <label>Destination Folder</label>
+        <property>sourcefiledest</property>
+        <documentation>Directory where Clover should place the instrumented sources. Note that files will be overwritten in the destination directory.</documentation>
+        <required>1</required>
+        <type>entry</type>
+    </formElement>
+    <formElement>
+        <label>Verbose Mode</label>
+        <property>verbose</property>
+        <documentation>Enables extra verbosity</documentation>
+        <required>0</required>
+        <type>checkbox</type>
+        <checkedValue>1</checkedValue>
+        <uncheckedValue>0</uncheckedValue>
+    </formElement>
+    <formElement>
+        <label>Additional commands for CloverInstr</label>
+        <property>additionalinstrcommands</property>
+        <value></value>
+        <documentation>Additional commands to be entered for CloverInstr</documentation>
+        <required>0</required>
+        <type>textarea</type>
+    </formElement>
+</editor>
