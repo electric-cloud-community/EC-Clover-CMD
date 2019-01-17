@@ -1,0 +1,43 @@
+<?xml version='1.0' standalone='yes'?>
+<fileset>
+  <file>
+    <path>cloverCmdDriver.pl</path>
+    <xpath>//property[propertyName=&quot;cloverCmdDriver&quot;]/value</xpath>
+  </file>
+  <file>
+    <path>postp_matchers.pl</path>
+    <xpath>//property[propertyName=&quot;postp_matchers&quot;]/value</xpath>
+  </file>
+  <file>
+    <path>ec_setup.pl</path>
+    <xpath>//property[propertyName=&quot;ec_setup&quot;]/value</xpath>
+  </file>
+  <file>
+    <path>cloverInstrumentDriver.pl</path>
+    <xpath>//property[propertyName=&quot;cloverInstrumentDriver&quot;]/value</xpath>
+  </file>
+  <file>
+    <path>cloverMergeDriver.pl</path>
+    <xpath>//property[propertyName=&quot;cloverMergeDriver&quot;]/value</xpath>
+  </file>
+  <file>
+    <path>cloverReportDriver.pl</path>
+    <xpath>//property[propertyName=&quot;cloverReportDriver&quot;]/value</xpath>
+  </file>
+  <file>
+    <path>forms/runCloverCmd.xml</path>
+    <xpath>//procedure[procedureName=&quot;runCloverCmd&quot;]/propertySheet/property[propertyName=&quot;ec_parameterForm&quot;]/value</xpath>
+  </file>
+  <file>
+    <path>forms/runCloverInstr.xml</path>
+    <xpath>//procedure[procedureName=&quot;runCloverInstr&quot;]/propertySheet/property[propertyName=&quot;ec_parameterForm&quot;]/value</xpath>
+  </file>
+  <file>
+    <path>forms/runCloverMerge.xml</path>
+    <xpath>//procedure[procedureName=&quot;runCloverMerge&quot;]/propertySheet/property[propertyName=&quot;ec_parameterForm&quot;]/value</xpath>
+  </file>
+  <file>
+    <path>forms/runCloverReport.xml</path>
+    <xpath>//procedure[procedureName=&quot;runCloverReport&quot;]/propertySheet/property[propertyName=&quot;ec_parameterForm&quot;]/value</xpath>
+  </file>
+</fileset>
