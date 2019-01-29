@@ -1,5 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -22,7 +22,7 @@
         <p>Plugin Version @PLUGIN_VERSION@</p>
         <hr style="margin-left: -10px; margin-top: 10px; height: 1px; width: 100%; color: #5981BD;"
             noshade="noshade" />
-<p>Revised on July 1, 2015</p><h1>Contents</h1><ul><li><p><a href="#overview">Overview</a></p></li><li><p><a href="#procedures">Plugin Procedures</a></p></li><li><p><a href="#example">Examples and Use Cases</a></p></li><li><p><a href="#rns">Release Notes</a></p></li></ul><h1 id="overview">Overview</h1>
+        <p>Revised on July 1, 2015</p><h1>Contents</h1><ul><li><p><a href="#overview">Overview</a></p></li><li><p><a href="#procedures">Plugin Procedures</a></p></li><li><p><a href="#example">Examples and Use Cases</a></p></li><li><p><a href="#rns">Release Notes</a></p></li></ul><h1 id="overview">Overview</h1>
         <p>Clover is a code coverage analysis tool for Java. It 
         includes historical reporting, control over the coverage-gathering process, command line tools, and legacy
         integration. Clover also lets you reduce testing time
@@ -35,7 +35,7 @@
         <h2>Clover Links</h2>
 
         <p>For details, see the Clover <a href="http://www.atlassian.com/software/clover/overview">
-          web page</a>.</p>
+        web page</a>.</p>
 
         <h2>ElectricFlow Integration to Clover</h2>
 
@@ -60,7 +60,7 @@
 		<p>IMPORTANT: In the ElectricFlow UI, go to the Home page, open the Main Menu, and click <b>Admin</b> > <b>Plugins</b> to open the Plugin Manager.</p>
         <div id="runCloverCmd">
             <a name='runCloverCmd'
-                 id="runCloverCmd"></a> 
+               id="runCloverCmd"></a> 
 
             <h3>runCloverCmd</h3>
 
@@ -78,523 +78,530 @@
 
                 <li>Create a report that shows the current coverage
                 status of the project.</li>
-            </ul><br />
-            <br />
-             
-
-            <table class="grid">
-                <thead>
-                    <tr>
-                        <th>Parameter</th>
-
-                        <th>Description</th>
-                    </tr>
-                </thead>
-
-                <tbody>
-                    <tr>
-                        <td>Working Directory</td>
-
-                        <td>Directory on which the command will be
-                        run.</td>
-                    </tr>
-
-                    <tr>
-                        <td class='required'>Path to Java</td>
-
-                        <td>Path to Java. (Required)</td>
-                    </tr>
-
-                    <tr>
-                        <td class='required'>Source Directory</td>
-
-                        <td>Path of the directory containing the source
-                        files to be instrumented. 4.
-                        (This is the command-line '--srcdir'
-                        option.) (Required)</td>
-                    </tr>
-
-                    <tr>
-                        <td class='required'>Destination
-                        Folder</td>
-
-                        <td>Directory to contain the
-                        instrumented sources. Note that files will
-                        be overwritten in the destination
-                        directory. (This is the command-line
-                        '--destdir' option.) (Required)</td>
-                    </tr>
-
-                    <tr>
-                        <td>Instrumenting DB file</td>
-
-                        <td>Clover initstring. This is the full
-                        path to the database file that will be used to
-                        construct/update to store coverage data.
-                        (This is the command-line '--initstring'
-                        option.)</td>
-                    </tr>
-
-                    <tr>
-                        <td>Verbose Mode</td>
-
-                        <td>(When checked) Enables extra verbosity. (This is the command-line --verbose
-                        option.)</td>
-                    </tr>
-
-                    <tr>
-                        <td>Always Report</td>
-
-                        <td>(When checked) Generates a report, even if there
-                        is no coverage information. (This is the
-                        command-line -a option.)</td>
-                    </tr>
-
-                    <tr>
-                        <td>Compile command</td>
-
-                        <td>Command-line command used for
-                        compilation of instrumented source files.
-                        Ant or javac is recommended.</td>
-                    </tr>
-
-                    <tr>
-                        <td>Additional commands for
-                        CloverInstr</td>
-
-                        <td>Additional commands to be entered for
-                        CloverInstr.</td>
-                    </tr>
-
-                    <tr>
-                        <td class='required'>Test Command line</td>
-
-                        <td>String containing the command line for
-                        invoking the tests. (Required)</td>
-                    </tr>
-
-                    <tr>
-                        <td>Merge</td>
-
-                        <td>(When checked) Merges
-                        existing Clover databases to allow generation of combined
-                        reports.</td>
-                    </tr>
-
-                    <tr>
-                        <td>Update</td>
-
-                        <td>(When checked) Includes any existing database
-                        specified by -i in the
-                        merge. If interval is specified, it is used
-                        as the span when reading the existing
-                        database. (This is the command-line
-                        --update option.)</td>
-                    </tr>
-
-                    <tr>
-                        <td>Additional commands for
-                        CloverMerge</td>
-
-                        <td>Additional commands to be entered for
-                        CloverMerge.</td>
-                    </tr>
-
-                    <tr>
-                        <td class='required'>Report format</td>
-
-                        <td>Output format of the report. Available
-                        options are HTML, XML, PDF, or console
-                        output.</td>
-                    </tr>
-
-                    <tr>
-                        <td>Report name</td>
-
-                        <td>File name of the report.</td>
-                    </tr>
-                </tbody>
-            </table>
-
-            <h2>Parameter
-            Form</h2><img src="../../plugins/@PLUGIN_KEY@/images/Clover-3.png"
-                 alt="screenshot" />
-        </div>
-
-        <div id="runCloverInstr">
-            <a name='runCloverInstr'
-                 id="runCloverInstr"></a> 
-
-            <h3>runCloverInstr</h3>
-
-            <p>The plugin calls the Clover tool's "CloverInstr"
-            command line and passes the user-provided
-            parameters.</p>
-
-            <table class="grid">
-                <thead>
-                    <tr>
-                        <th>Parameter</th>
-
-                        <th>Description</th>
-                    </tr>
-                </thead>
-
-                <tbody>
-                    <tr>
-                        <td>Working Directory</td>
-
-                        <td>Directory on which the command will
-                        be executed.</td>
-                    </tr>
-
-                    <tr>
-                        <td>Path to Java</td>
-
-                        <td>Absolute path to Java.</td>
-                    </tr>
-
-                    <tr>
-                        <td>ClassPath</td>
-
-                        <td>Classpath to be entered.</td>
-                    </tr>
-
-                    <tr>
-                        <td class='required'>Clover Instr's Main
-                        Class</td>
-
-                        <td>Clover Instr main class. The default is
-                        com.cenqua.clover.CloverInstr.
-                        (Required)</td>
-                    </tr>
-
-                    <tr>
-                        <td class='required'>Instrumenting DB
-                        file</td>
-
-                        <td>Clover initstring. This is the full
-                        path to the database file that will be used to
-                        construct/update to store coverage data.
-                        (This is the command-line --initstring
-                        option.) (Required)</td>
-                    </tr>
-
-                    <tr>
-                        <td class='required'>Source Directory</td>
-
-                        <td>Path of the directory where the source
-                        files to be instrumented are located. (This
-                        is the command-line --srcdir option.)
-                        (Required)</td>
-                    </tr>
-
-                    <tr>
-                        <td class='required'>Destination
-                        Folder</td>
-
-                        <td>Directory where Clover should place the
-                        instrumented sources. Note that files will
-                        be overwritten in the destination
-                        directory. (This is the command-line
-                        --destdir option.) (Required)</td>
-                    </tr>
-
-                    <tr>
-                        <td>Verbose Mode</td>
-
-                        <td>(When checked) Enables extra verbosity.
-                        (This is the command-line --verbose
-                        option.)</td>
-                    </tr>
-
-                    <tr>
-                        <td>Additional commands for
-                        CloverInstr</td>
-
-                        <td>Additional commands to be entered for
-                        CloverInstr.</td>
-                    </tr>
-                </tbody>
-            </table>
-
-            <h2>Parameter
-            Form</h2><img src="../../plugins/@PLUGIN_KEY@/images/Clover-6.png"
-                 alt="screenshot" />
-        </div>
-
-        <div id="runCloverMerge">
-            <a name='runCloverMerge'
-                 id="runCloverMerge"></a> 
-
-            <h3>runCloverMerge</h3>
-
-            <p>The plugin calls Clover's "CloverMerge"
-            command line and passes the user-provided
-            parameters.</p>
-
-            <table class="grid">
-                <thead>
-                    <tr>
-                        <th>Parameter</th>
-
-                        <th>Description</th>
-                    </tr>
-                </thead>
-
-                <tbody>
-                    <tr>
-                        <td>Working Directory</td>
-
-                        <td>Directory on which the command will
-                        be run.</td>
-                    </tr>
-
-                    <tr>
-                        <td>Path to Java</td>
-
-                        <td>Absolute path to Java.</td>
-                    </tr>
-
-                    <tr>
-                        <td>ClassPath</td>
-
-                        <td>Classpath to be entered.</td>
-                    </tr>
-
-                    <tr>
-                        <td class='required'>Clover Merge's Main
-                        Class</td>
-
-                        <td>Clover Merge's main class. The default is
-                        com.cenqua.clover.CloverMerge.
-                        (Required)</td>
-                    </tr>
-
-                    <tr>
-                        <td class='required'>Merged DB file
-                        destination</td>
-
-                        <td>Clover initstring. This is the path
-                        where the new merged database will be
-                        written. (Required)</td>
-                    </tr>
-
-                    <tr>
-                        <td>Verbose Mode</td>
-
-                        <td>(When checked) Enables extra verbosity.
-                        (This is the command-line '--verbose'
-                        option.)</td>
-                    </tr>
-
-                    <tr>
-                        <td>Update</td>
-
-                        <td>(When checked) Any existing database
-                        specified by -i will be included in the
-                        merge. If interval is specified, it is used
-                        as the span when reading the existing
-                        database. (This is the command-line
-                        '--update' option).</td>
-                    </tr>
-
-                    <tr>
-                        <td>Additional commands for
-                        CloverMerge</td>
-
-                        <td>Additional commands to be entered for
-                        CloverMerge.</td>
-                    </tr>
-
-                    <tr>
-                        <td class='required'>Database files to
-                        merge</td>
-
-                        <td>Database files to merge.
-                        (Required)</td>
-                    </tr>
-                </tbody>
-            </table>
-
-            <h2>Parameter
-            Form</h2><img src="../../plugins/@PLUGIN_KEY@/images/Clover-8.png"
-                 alt="screenshot" />
-        </div>
-
-        <div id="runCloverReport">
-            <a name='runCloverReport'
-                 id="runCloverReport"></a> 
-
-            <h3>runCloverReport</h3>
-
-            <p>The plugin calls Clover's XMLReporter,
-            HtmlReporter, PDFReporter, or ConsoleReporter (depending
-            on the report format parameter) and passes the
-            user-provided parameters.</p>
-
-            <table class="grid">
-                <thead>
-                    <tr>
-                        <th>Parameter</th>
-
-                        <th>Description</th>
-                    </tr>
-                </thead>
-
-                <tbody>
-                    <tr>
-                        <td>Working Directory</td>
-
-                        <td>Directory on which the command will
-                        be run.</td>
-                    </tr>
-
-                    <tr>
-                        <td>Path to Java</td>
-
-                        <td>Path to Java.</td>
-                    </tr>
-
-                    <tr>
-                        <td>ClassPath</td>
-
-                        <td>Classpath to be entered.</td>
-                    </tr>
-
-                    <tr>
-                        <td class='required'>Instrumenting DB
-                        file</td>
-
-                        <td>Clover initstring. Full
-                        path to the database that will be used to
-                        construct/update to store coverage data.
-                        (This is the command-line '--initstring'
-                        option.) (Required)</td>
-                    </tr>
-
-                    <tr>
-                        <td class='required'>Source Directory</td>
-
-                        <td>Path of the directory where the source
-                        files to be instrumented are located. (This
-                        is the command-line '-p' option.) (Required)</td>
-                    </tr>
-
-                    <tr>
-                        <td>Verbose Mode</td>
-
-                        <td>(When checked) Enables extra verbosity.
-                        (This is the command-line '--verbose'
-                        option).</td>
-                    </tr>
-
-                    <tr>
-                        <td>Always Report</td>
-
-                        <td>(When checked) Generates a report even if there
-                        is no coverage information. (This is the
-                        command-line -a option.)</td>
-                    </tr>
-
-                    <tr>
-                        <td>Additional commands for
-                        CloverReport</td>
-
-                        <td>Additional commands to be entered for
-                        CloverReport.</td>
-                    </tr>
-
-                    <tr>
-                        <td class='required'>Report Type</td>
-
-                        <td>Type of report to generate. Available
-                        options are HTML, XML, PDF, or console
-                        output. (Required)</td>
-                    </tr>
-
-                    <tr>
-                        <td>Report name</td>
-
-                        <td>File name of the report.</td>
-                    </tr>
-                </tbody>
-            </table>
-
-            <h2>Parameter
-            Form</h2><img src="../../plugins/@PLUGIN_KEY@/images/Clover-10.png"
-                 alt="screenshot" />
-        </div>
-
-        <h1 id="example">Examples and Use Cases</h1>
+                </ul><br />
+                <br />
+                
+
+                <table class="grid">
+                    <thead>
+                        <tr>
+                            <th>Parameter</th>
+
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>Working Directory</td>
+
+                            <td>Directory on which the command will be
+                            run.</td>
+                        </tr>
+
+                        <tr>
+                            <td class='required'>Path to Java</td>
+
+                            <td>Path to Java. (Required)</td>
+                        </tr>
+
+                        <tr>
+                            <td class='required'>Source Directory</td>
+
+                            <td>Path of the directory containing the source
+                            files to be instrumented. 4.
+                            (This is the command-line '--srcdir'
+                            option.) (Required)</td>
+                        </tr>
+
+                        <tr>
+                            <td class='required'>Destination
+                            Folder</td>
+
+                            <td>Directory to contain the
+                            instrumented sources. Note that files will
+                            be overwritten in the destination
+                            directory. (This is the command-line
+                            '--destdir' option.) (Required)</td>
+                        </tr>
+
+                        <tr>
+                            <td>Instrumenting DB file</td>
+
+                            <td>Clover initstring. This is the full
+                            path to the database file that will be used to
+                            construct/update to store coverage data.
+                            (This is the command-line '--initstring'
+                            option.)</td>
+                        </tr>
+
+                        <tr>
+                            <td>Verbose Mode</td>
+
+                            <td>(When checked) Enables extra verbosity. (This is the command-line --verbose
+                            option.)</td>
+                        </tr>
+
+                        <tr>
+                            <td>Always Report</td>
+
+                            <td>(When checked) Generates a report, even if there
+                            is no coverage information. (This is the
+                            command-line -a option.)</td>
+                        </tr>
+
+                        <tr>
+                            <td>Compile command</td>
+
+                            <td>Command-line command used for
+                            compilation of instrumented source files.
+                            Ant or javac is recommended.</td>
+                        </tr>
+
+                        <tr>
+                            <td>Additional commands for
+                            CloverInstr</td>
+
+                            <td>Additional commands to be entered for
+                            CloverInstr.</td>
+                        </tr>
+
+                        <tr>
+                            <td class='required'>Test Command line</td>
+
+                            <td>String containing the command line for
+                            invoking the tests. (Required)</td>
+                        </tr>
+
+                        <tr>
+                            <td>Merge</td>
+
+                            <td>(When checked) Merges
+                            existing Clover databases to allow generation of combined
+                            reports.</td>
+                        </tr>
+
+                        <tr>
+                            <td>Update</td>
+
+                            <td>(When checked) Includes any existing database
+                            specified by -i in the
+                            merge. If interval is specified, it is used
+                            as the span when reading the existing
+                            database. (This is the command-line
+                            --update option.)</td>
+                        </tr>
+
+                        <tr>
+                            <td>Additional commands for
+                            CloverMerge</td>
+
+                            <td>Additional commands to be entered for
+                            CloverMerge.</td>
+                        </tr>
+
+                        <tr>
+                            <td class='required'>Report format</td>
+
+                            <td>Output format of the report. Available
+                            options are HTML, XML, PDF, or console
+                            output.</td>
+                        </tr>
+
+                        <tr>
+                            <td>Report name</td>
+
+                            <td>File name of the report.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h2>Parameter
+                Form</h2><img src="../../plugins/@PLUGIN_KEY@/images/Clover-3.png"
+                alt="screenshot" />
+            </div>
+
+            <div id="runCloverInstr">
+                <a name='runCloverInstr'
+                   id="runCloverInstr"></a> 
+
+                <h3>runCloverInstr</h3>
+
+                <p>The plugin calls the Clover tool's "CloverInstr"
+                command line and passes the user-provided
+                parameters.</p>
+
+                <table class="grid">
+                    <thead>
+                        <tr>
+                            <th>Parameter</th>
+
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>Working Directory</td>
+
+                            <td>Directory on which the command will
+                            be executed.</td>
+                        </tr>
+
+                        <tr>
+                            <td>Path to Java</td>
+
+                            <td>Absolute path to Java.</td>
+                        </tr>
+
+                        <tr>
+                            <td>ClassPath</td>
+
+                            <td>Classpath to be entered.</td>
+                        </tr>
+
+                        <tr>
+                            <td class='required'>Clover Instr's Main
+                            Class</td>
+
+                            <td>Clover Instr main class. The default is
+                            com.cenqua.clover.CloverInstr.
+                            (Required)</td>
+                        </tr>
+
+                        <tr>
+                            <td class='required'>Instrumenting DB
+                            file</td>
+
+                            <td>Clover initstring. This is the full
+                            path to the database file that will be used to
+                            construct/update to store coverage data.
+                            (This is the command-line --initstring
+                            option.) (Required)</td>
+                        </tr>
+
+                        <tr>
+                            <td class='required'>Source Directory</td>
+
+                            <td>Path of the directory where the source
+                            files to be instrumented are located. (This
+                            is the command-line --srcdir option.)
+                            (Required)</td>
+                        </tr>
+
+                        <tr>
+                            <td class='required'>Destination
+                            Folder</td>
+
+                            <td>Directory where Clover should place the
+                            instrumented sources. Note that files will
+                            be overwritten in the destination
+                            directory. (This is the command-line
+                            --destdir option.) (Required)</td>
+                        </tr>
+
+                        <tr>
+                            <td>Verbose Mode</td>
+
+                            <td>(When checked) Enables extra verbosity.
+                            (This is the command-line --verbose
+                            option.)</td>
+                        </tr>
+
+                        <tr>
+                            <td>Additional commands for
+                            CloverInstr</td>
+
+                            <td>Additional commands to be entered for
+                            CloverInstr.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h2>Parameter
+                Form</h2><img src="../../plugins/@PLUGIN_KEY@/images/Clover-6.png"
+                alt="screenshot" />
+            </div>
+
+            <div id="runCloverMerge">
+                <a name='runCloverMerge'
+                   id="runCloverMerge"></a> 
+
+                <h3>runCloverMerge</h3>
+
+                <p>The plugin calls Clover's "CloverMerge"
+                command line and passes the user-provided
+                parameters.</p>
+
+                <table class="grid">
+                    <thead>
+                        <tr>
+                            <th>Parameter</th>
+
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>Working Directory</td>
+
+                            <td>Directory on which the command will
+                            be run.</td>
+                        </tr>
+
+                        <tr>
+                            <td>Path to Java</td>
+
+                            <td>Absolute path to Java.</td>
+                        </tr>
+
+                        <tr>
+                            <td>ClassPath</td>
+
+                            <td>Classpath to be entered.</td>
+                        </tr>
+
+                        <tr>
+                            <td class='required'>Clover Merge's Main
+                            Class</td>
+
+                            <td>Clover Merge's main class. The default is
+                            com.cenqua.clover.CloverMerge.
+                            (Required)</td>
+                        </tr>
+
+                        <tr>
+                            <td class='required'>Merged DB file
+                            destination</td>
+
+                            <td>Clover initstring. This is the path
+                            where the new merged database will be
+                            written. (Required)</td>
+                        </tr>
+
+                        <tr>
+                            <td>Verbose Mode</td>
+
+                            <td>(When checked) Enables extra verbosity.
+                            (This is the command-line '--verbose'
+                            option.)</td>
+                        </tr>
+
+                        <tr>
+                            <td>Update</td>
+
+                            <td>(When checked) Any existing database
+                            specified by -i will be included in the
+                            merge. If interval is specified, it is used
+                            as the span when reading the existing
+                            database. (This is the command-line
+                            '--update' option).</td>
+                        </tr>
+
+                        <tr>
+                            <td>Additional commands for
+                            CloverMerge</td>
+
+                            <td>Additional commands to be entered for
+                            CloverMerge.</td>
+                        </tr>
+
+                        <tr>
+                            <td class='required'>Database files to
+                            merge</td>
+
+                            <td>Database files to merge.
+                            (Required)</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h2>Parameter
+                Form</h2><img src="../../plugins/@PLUGIN_KEY@/images/Clover-8.png"
+                alt="screenshot" />
+            </div>
+
+            <div id="runCloverReport">
+                <a name='runCloverReport'
+                   id="runCloverReport"></a> 
+
+                <h3>runCloverReport</h3>
+
+                <p>The plugin calls Clover's XMLReporter,
+                HtmlReporter, PDFReporter, or ConsoleReporter (depending
+                on the report format parameter) and passes the
+                user-provided parameters.</p>
+
+                <table class="grid">
+                    <thead>
+                        <tr>
+                            <th>Parameter</th>
+
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>Working Directory</td>
+
+                            <td>Directory on which the command will
+                            be run.</td>
+                        </tr>
+
+                        <tr>
+                            <td>Path to Java</td>
+
+                            <td>Path to Java.</td>
+                        </tr>
+
+                        <tr>
+                            <td>ClassPath</td>
+
+                            <td>Classpath to be entered.</td>
+                        </tr>
+
+                        <tr>
+                            <td class='required'>Instrumenting DB
+                            file</td>
+
+                            <td>Clover initstring. Full
+                            path to the database that will be used to
+                            construct/update to store coverage data.
+                            (This is the command-line '--initstring'
+                            option.) (Required)</td>
+                        </tr>
+
+                        <tr>
+                            <td class='required'>Source Directory</td>
+
+                            <td>Path of the directory where the source
+                            files to be instrumented are located. (This
+                            is the command-line '-p' option.) (Required)</td>
+                        </tr>
+
+                        <tr>
+                            <td>Verbose Mode</td>
+
+                            <td>(When checked) Enables extra verbosity.
+                            (This is the command-line '--verbose'
+                            option).</td>
+                        </tr>
+
+                        <tr>
+                            <td>Always Report</td>
+
+                            <td>(When checked) Generates a report even if there
+                            is no coverage information. (This is the
+                            command-line -a option.)</td>
+                        </tr>
+
+                        <tr>
+                            <td>Additional commands for
+                            CloverReport</td>
+
+                            <td>Additional commands to be entered for
+                            CloverReport.</td>
+                        </tr>
+
+                        <tr>
+                            <td class='required'>Report Type</td>
+
+                            <td>Type of report to generate. Available
+                            options are HTML, XML, PDF, or console
+                            output. (Required)</td>
+                        </tr>
+
+                        <tr>
+                            <td>Report name</td>
+
+                            <td>File name of the report.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h2>Parameter
+                Form</h2><img src="../../plugins/@PLUGIN_KEY@/images/Clover-10.png"
+                alt="screenshot" />
+            </div>
+
+            <h1 id="example">Examples and Use Cases</h1>
 
             <p>For an example that uses the following folder
             structure:<br />
-             <img src="../../plugins/@PLUGIN_KEY@/images/Tree.png"
+            <img src="../../plugins/@PLUGIN_KEY@/images/Tree.png"
                  alt="Tree" /></p>
 
             <p>And uses a console application with a main
             class with the following code:<br />
-             <img src="../../plugins/@PLUGIN_KEY@/images/Code.png"
+            <img src="../../plugins/@PLUGIN_KEY@/images/Code.png"
                  alt="JavaCode" /></p>
 
             <p>You normally run the application from the command line by
             using the following command:</p> <p>java -cp C:\CloverDemo\bin CloverDemo 9</p>
             <p>The expected result is "9 is less than 10".</p>
 
-            <p>To see the code coverage            of your application, create a step and fill in the parameter form as follows:<br />
-             <img src="../../plugins/@PLUGIN_KEY@/images/Clover-3.png"
+            <p>To see the code coverage            of your application, create a step and fill in the parameter form as follows:<br />
+            <img src="../../plugins/@PLUGIN_KEY@/images/Clover-3.png"
                  alt="screenshot" /></p>
 
             <p>Then run the procedure and view the log:<br />
-             <img src="../../plugins/@PLUGIN_KEY@/images/Clover-5.png"
-                 alt="screenshot" /></p>
+            <img src="../../plugins/@PLUGIN_KEY@/images/Clover-5.png"
+                 alt="screenshot" /></p>
             <p>Then generate detailed reports with the
             runCloverReport procedures. Following are sample reports in several formats.<br />
-             PDF:<br />
-             <img src="../../plugins/@PLUGIN_KEY@/images/Clover-4.png"
+            PDF:<br />
+            <img src="../../plugins/@PLUGIN_KEY@/images/Clover-4.png"
                  alt="PDF" /><br />
-             XML:<br />
-             <img src="../../plugins/@PLUGIN_KEY@/images/Clover-12.png"
+            XML:<br />
+            <img src="../../plugins/@PLUGIN_KEY@/images/Clover-12.png"
                  alt="XML" /><br />
-             HTML:<br />
-             <img src="../../plugins/@PLUGIN_KEY@/images/Clover-13.png"
+            HTML:<br />
+            <img src="../../plugins/@PLUGIN_KEY@/images/Clover-13.png"
                  alt="Html" /><br /></p>
-        <br />
-        <br />
-         
+            <br />
+            <br />
+            
 
-        <h1 id="rns">Release Notes</h1>
-        <h2>@PLUGIN_KEY@-2.0.3</h2>        <ul>            <li>Renamed ElectricCommander to ElectricFlow.</li>        </ul>
-        <h2>@PLUGIN_KEY@-2.0.2</h2>
+            <h1 id="rns">Release Notes</h1>
+            <h2>@PLUGIN_KEY@-2.0.4</h2>
+            <ul>
+                <li>Added metadata that is required for 9.0 release.</li>
+            </ul>
+            <h2>@PLUGIN_KEY@-2.0.3</h2>
+            <ul>
+                <li>Renamed ElectricCommander to ElectricFlow.</li>
+            </ul>
+            <h2>@PLUGIN_KEY@-2.0.2</h2>
 
-        <ul>
-            <li>Changed procedure names in the step picker section.</li>
-        </ul>
-        
-        <h2>@PLUGIN_KEY@-2.0.1</h2>
+            <ul>
+                <li>Changed procedure names in the step picker section.</li>
+            </ul>
+            
+            <h2>@PLUGIN_KEY@-2.0.1</h2>
 
-        <ul>
-            <li>Improved the Help page.</li>
+            <ul>
+                <li>Improved the Help page.</li>
 
-            <li>Added XML panels.</li>
+                <li>Added XML panels.</li>
 
-            <li>Made code improvements.</li>
-        </ul>
+                <li>Made code improvements.</li>
+            </ul>
 
-        <h2>EC-Clover 1.0.2</h2>
+            <h2>EC-Clover 1.0.2</h2>
 
-        <ul>
-            <li>Updated the Help page.</li>
-        </ul>
+            <ul>
+                <li>Updated the Help page.</li>
+            </ul>
 
-        <h2>EC-Clover-CMD 1.0.1</h2>
+            <h2>EC-Clover-CMD 1.0.1</h2>
 
-        <ul>
-            <li>Made code improvements.</li>
+            <ul>
+                <li>Made code improvements.</li>
 
-            <li>Changed the system tests.</li>
-        </ul>
-    </div>
-</body>
+                <li>Changed the system tests.</li>
+            </ul>
+        </div>
+    </body>
 </html>
